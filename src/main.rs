@@ -1,7 +1,4 @@
 fn main() {
-    // println!("{}", caesar("test phrase", 10));
-    // println!("{}", caesar("TEST PHRASE", 10));
-    // println!("{}", ((-100 % 26) + 26) % 26);
 }
 
 fn caesar(_input: &str, _shift: i32) -> String{
