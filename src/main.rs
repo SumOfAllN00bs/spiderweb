@@ -5,7 +5,6 @@ pub use commands::*;
 
 
 fn main() {
-    //println!("{}", caesar("lol", 1));
 }
 
 #[cfg(test)]

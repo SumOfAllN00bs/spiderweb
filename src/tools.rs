@@ -4,13 +4,16 @@
 
         for c in input.chars() {
             let converted = c as u32;
+            // skip !(a-zA-z)
             if !(converted >= 65 && converted <= 90) && !(converted >= 97 && converted <= 122) {
                 result.push(std::char::from_u32(converted).unwrap());
                 continue;
             }
+            // shift modulo 26 (A-Z)
             if converted >= 65 && converted <= 90 {
                 result.push(std::char::from_u32((((converted - 65) + trueshift) % 26) + 65).unwrap());
             }
+            // shift modulo 26 (a-z)
             if converted >= 97 && converted <= 122 {
                 result.push(std::char::from_u32((((converted - 97) + trueshift) % 26) + 97).unwrap());
             }

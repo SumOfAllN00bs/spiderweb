@@ -1,5 +1,6 @@
 use super::*;
 
+// *** Tests for caesar cipher *** //
 #[test]
 fn caesar_test_1() {
     assert_eq!(caesar("first test phrase", 1), "gjstu uftu qisbtf");
@@ -31,4 +32,12 @@ fn caesar_test_7() {
 #[test]
 fn caesar_test_8() {
     assert_eq!(caesar("EiGtH test :;[\\^~#`", -6), "YcAnB nymn :;[\\^~#`");
+}
+#[test]
+fn caesar_test_9() {
+    assert_eq!(caesar("nine test :3 :) :-| B-i", 27), "ojof uftu :3 :) :-| C-j");
+}
+#[test]
+fn caesar_test_10() {
+    assert_eq!(caesar("ten eleveN TwElVe THIRTEEN", 13), "gra ryrirA GjRyIr GUVEGRRA");
 }
