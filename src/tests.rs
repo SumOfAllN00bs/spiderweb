@@ -1,4 +1,5 @@
 use super::*;
+use test::Bencher;
 
 // *** Tests for caesar cipher *** //
 #[test]
@@ -23,7 +24,7 @@ fn caesar_test_5() {
 }
 #[test]
 fn caesar_test_6() {
-    assert_eq!(caesar("SIxTH !\"#$%&'()*+,-./0123456789", 1000), "EUjFT !\"#$%&'()*+,-./0123456789");
+    assert_eq!(caesar("SIxTH !\"#$%&'()*+,-./0123456789", 126), "OEtPD !\"#$%&'()*+,-./0123456789");
 }
 #[test]
 fn caesar_test_7() {
@@ -40,4 +41,11 @@ fn caesar_test_9() {
 #[test]
 fn caesar_test_10() {
     assert_eq!(caesar("ten eleveN TwElVe THIRTEEN", 13), "gra ryrirA GjRyIr GUVEGRRA");
+}
+
+// *** Benchmarks *** //
+
+#[bench]
+fn caesar_bench_1(b: &mut Bencher) {
+    b.iter(|| caesar(":;[\\^~#`X4KJS58yZ8 ld7nS2ZrZp XjjV8mxLkH :3 :) :-| B-izsToP0dR6B baxo1l0jup", 13));
 }
