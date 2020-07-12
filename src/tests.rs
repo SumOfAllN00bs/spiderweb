@@ -97,6 +97,10 @@ fn caesar_bench_1(b: &mut Bencher) {
     b.iter(|| caesar(":;[\\^~#`X4KJS58yZ8 ld7nS2ZrZp XjjV8mxLkH :3 :) :-| B-izsToP0dR6B baxo1l0jup", 13));
 }
 #[bench]
+fn caesar_bench_2(b: &mut Bencher) {
+    b.iter(|| caesar("this is the test sentence IT CAN HANDLE CAPITALS", 13));
+}
+#[bench]
 fn upper_bench_1(b: &mut Bencher) {
     b.iter(|| upper(":;[\\^~#`X4KJS58yZ8 ld7nS2ZrZp XjjV8mxLkH :3 :) :-| B-izsToP0dR6B baxo1l0jup"));
 }
