@@ -19,3 +19,11 @@ pub fn caesar(input: &str, shift: i32) -> String {
     }
     result
 }
+
+pub fn upper(input: &str) -> String {
+    input.to_string().to_ascii_uppercase()
+}
+
+pub fn lower(input: &str) -> String {
+    input.to_string().to_ascii_lowercase()
+}
